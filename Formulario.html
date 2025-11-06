@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enquete de Filmes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+  <div class="container py-5">
+    <h2 class="text-center text-danger mb-4">🎬 Enquete sobre Filmes</h2>
+    <p class="text-center">Responda as perguntas abaixo e compartilhe suas preferências cinematográficas!</p>
+
+    <form action="agradecimento.html" method="POST" class="mx-auto" style="max-width: 700px;">
+      
+      <div class="mb-3">
+        <label for="nome" class="form-label">Nome completo</label>
+        <input type="text" class="form-control" id="nome" name="nome" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="idade" class="form-label">Idade</label>
+        <input type="number" class="form-control" id="idade" name="idade" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Qual é o seu gênero de filme favorito?</label>
+        <select class="form-select" name="genero" required>
+          <option value="">Selecione...</option>
+          <option>Ação</option>
+          <option>Comédia</option>
+          <option>Drama</option>
+          <option>Terror</option>
+          <option>Ficção Científica</option>
+          <option>Romance</option>
+          <option>Animação</option>
+          <option>Documentário</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Com que frequência você assiste filmes?</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="frequencia" id="diariamente" value="Diariamente" required>
+          <label class="form-check-label" for="diariamente">Diariamente</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="frequencia" id="semanalmente" value="Semanalmente">
+          <label class="form-check-label" for="semanalmente">Semanalmente</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="frequencia" id="mensalmente" value="Mensalmente">
+          <label class="form-check-label" for="mensalmente">Mensalmente</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="frequencia" id="raramente" value="Raramente">
+          <label class="form-check-label" for="raramente">Raramente</label>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="plataforma" class="form-label">Qual plataforma você mais utiliza?</label>
+        <select class="form-select" name="plataforma" required>
+          <option value="">Selecione...</option>
+          <option>Netflix</option>
+          <option>Amazon Prime Video</option>
+          <option>Disney+</option>
+          <option>HBO Max</option>
+          <option>Outros</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="filmeFavorito" class="form-label">Qual é o seu filme favorito?</label>
+        <input type="text" class="form-control" id="filmeFavorito" name="filmeFavorito" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="nota" class="form-label">De 1 a 5, qual sua nota média para os filmes que assiste?</label>
+        <input type="range" class="form-range" min="1" max="5" step="1" id="nota" name="nota">
+        <div class="d-flex justify-content-between">
+          <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="comentario" class="form-label">Deixe um comentário sobre um filme que te marcou:</label>
+        <textarea class="form-control" id="comentario" name="comentario" rows="3" placeholder="Escreva aqui..."></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-danger w-100">Enviar Enquete</button>
+    </form>
+  </div>
+</body>
+</html>
